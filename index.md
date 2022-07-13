@@ -1,95 +1,30 @@
 ---
-image: https://arewep2pyet.com/assets/images/logo.png
+image: https://arewemlsyet.com/assets/images/logo.png
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2022-04-16_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2022-07-13_
 
 ```
-                                        ____                      _   ___ 
-  __ _ _ __ ___   __      _____    _ __|___ \ _ __     _   _  ___| |_/ _ \
- / _` | '__/ _ \  \ \ /\ / / _ \  | '_ \ __) | '_ \   | | | |/ _ \ __\// /
-| (_| | | |  __/   \ V  V /  __/  | |_) / __/| |_) |  | |_| |  __/ |_  \/ 
- \__,_|_|  \___|    \_/\_/ \___|  | .__/_____| .__/    \__, |\___|\__| () 
-                                  |_|        |_|       |___/                
+                                   __   __ _    ____               _   ___ 
+  __ _ _ __ ___   __      _____   |  \ /  | |  /   _|   _   _  ___| |_/ _ \
+ / _` | '__/ _ \  \ \ /\ / / _ \  |   V   | |  \_ (_   | | | |/ _ \ __\// /
+| (_| | | |  __/   \ V  V /  __/  | |\_/| | |____)  \  | |_| |  __/ |_  \/ 
+ \__,_|_|  \___|    \_/\_/ \___|  |_|   |_|____|____/   \__, |\___|\__| () 
+                                                         |___/             
 ```
 
 # Not Yet.
 
-Check out the [Introducing P2P Matrix](https://matrix.org/blog/2020/06/02/introducing-p-2-p-matrix/) and [Introducing Pinecone](https://matrix.org/blog/2021/05/06/introducing-the-pinecone-overlay-network) blog posts for why we are doing this.
+[Messaging Layer Security (MLS)](https://messaginglayersecurity.rocks/) is an
+upcoming IETF standard for end-to-end encryption in messaging systems.  We are
+investigating bringing MLS to Matrix.
 
-Our aims are to:
- - Bootstrap a permanent public P2P Matrix network
- - Link it to the existing Matrix network to benefit from the existing content & users and make it actually usable.
+# Resources
 
-Track the progress of P2P [Matrix](https://matrix.org) and join us at [#p2p:matrix.org](https://matrix.to/#/#p2p:matrix.org).
+- [MSC2883](https://github.com/matrix-org/matrix-spec-proposals/pull/2883):
+  Matrix-flavoured MLS
+- [Decentralised
+  MLS](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org)
 
-### Dendrite 
+# Tasks
 
-We need a fully-featured production-ready homeserver which can be embedded into a range of clients, from mobile devices to web browsers.
-
-<!-- TODO: Automatically generate -->
-- Synapse parity: (as of [f7109de](https://github.com/matrix-org/dendrite/runs/5836736553?check_suite_focus=true))
-    * 🚧 Client-Server API: 81%, aim: >90%
-    * 🚧 Server-Server API: 94%, aim: 100%
-- Embeddability:
-    * ✅ Embeddable database (SQLite3)
-    * ✅ WASM
-    * ✅ Android
-    * ✅ iOS
-- Performance:
-    * ❌ Ensure memory usage of embedded instances is bounded e.g cache sizes.
-    * ❌ Ensure CPU usage of embedded instances is bounded e.g # spawned goroutines.
-- Stability and Maintenance:
-    * 🚧 Test coverage >=80% for code used in embedded instances: ??% (as of xxxx) <!-- TODO: Automatically generate -->
-    * 🚧 Active and timely (<7d) triage over main issue tracker.
-    * 🚧 dendrite.matrix.org metrics are healthy (Sentry, Prometheus)
-
-### Pinecone
-
-We need a production-ready [overlay network](https://en.wikipedia.org/wiki/Overlay_network) for P2P traffic.
-
-- Experiment with existing P2P network stacks for use with Matrix:
-    * ✅ libp2p
-    * ✅ yggdrasil
-- Create a custom P2P network stack which works for Matrix:
-    * ✅ Source-routed yggdrasil
-    * ✅ SNEK for improved routing
-    * ✅ Simulator to debug and stress-test the network
-- Works on a range of transports:
-    * ✅ Public internet
-    * ✅ LANs
-    * ✅ Bluetooth LE 
-- Resilience to adversarial attacks:
-    * 🚧 Sybil attacks
-    * 🚧 Eclipse attacks
-    * 🚧 Keyspace collision attacks
-    * 🚧 Churn attacks
-    * 🚧 Root hijacking attacks
-    * 🚧 Malicious packet drop attacks
-- ✅ Good (>80% median) packet arrival performance in Mobility tests
-    * Mobility is defined as 50 randomly placed nodes in a 1x1km square, each randomly moving 0-20m every 10s
-    * Mobility testing is performed for 360 iterations of node movement
-    * Packet arrival performance is measured using pings between a subset of randomly selected nodes at least 2 hops apart at each mobility step
-
-### Matrix
-
-We need to improve the Federation protocol to work with servers which frequently go offline and may have 1000s of servers (p2p nodes) in each room.
-
-- ❌ Implement comprehensive Store-and-Forward event routing capabilities in Matrix to allow nodes to talk to each other even if they aren't online at the same time. Matrix currently has limited support for this via backfilling events.
-- ❌ Improve [event authentication rules](https://spec.matrix.org/unstable/server-server-api/#checks-performed-on-receipt-of-a-pdu) when the majority of nodes in the room are unreachable.
-- ❌ Improve [semantic delivery of old events to clients](https://github.com/matrix-org/matrix-spec/issues/852) to ensure that when old nodes come online clients don't see lots of old messages.
-- ❌ Support delivery of push notifications to P2P devices
-- ❌ Extension: Improve delivery of media uploads (content ID based?)
-- ❌ Extension: implement a better federation routing algorithm than full-mesh routing. This allows users to talk in very large rooms without O(n) scaling on the number of nodes in the room.
-
-### Bridging between P2P and Normal Matrix
-
-We need a way to bootstrap the system with content and users. We can use the existing Matrix ecosystem to do this.
-
-- ❌ A server which can bridge traffic between P2P and normal matrix e.g `@ed25519-key:server-name.com` or a bridge.
-- ❌ First-class support for P2P gateways in Matrix (e.g MSC for it) so any compatible room can use P2P rather than relying on a bridging server.
-
-### Antigoals at this point
-
-- Account portability or multihomed accounts are out of scope.  As a first cut, each P2P node will be its own user account (to avoid the initial release getting blocked on solving account portability)
-- Avoid temptation to redesign all of Matrix; instead, do the minimal changes required to achieve the above goals.
-- Avoid premature optimisation for metadata privacy.  As long as we don’t design it out, we can ratchet up our metadata privacy at the federation level (e.g. by adding in per-room user IDs, sealed sender, mixnets etc) in subsequent phases.
+TODO: ...
