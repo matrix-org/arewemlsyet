@@ -19,7 +19,7 @@ upcoming IETF standard for end-to-end encryption in messaging systems.  We are
 investigating bringing MLS to Matrix.
 
 In most cases, MLS has better performance in large groups than Olm/Megolm.  The
-graph below shows a comparison[¹] between some MLS and Olm/Megolm operations.
+graph below shows a comparison[¹](#fn1) between some MLS and Olm/Megolm operations.
 
 ![Comparison graph](comparison.png)
 
@@ -38,7 +38,7 @@ this limitation.
 In addition, we need to investigate how other Matrix features, such as key
 backups, interact with MLS.
 
-¹ code for running the comparison is at https://gitlab.matrix.org/uhoreg/mls-comparison
+<a name="fn1">¹</a> code for running the comparison is at https://gitlab.matrix.org/uhoreg/mls-comparison
 
 # Tasks
 
