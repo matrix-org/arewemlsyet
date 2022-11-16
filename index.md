@@ -1,7 +1,7 @@
 ---
 image: https://arewemlsyet.com/assets/images/logo.png
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2022-07-13_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2022-11-16_
 
 ```
                                    __   __ _    ____               _   ___ 
@@ -18,13 +18,55 @@ image: https://arewemlsyet.com/assets/images/logo.png
 upcoming IETF standard for end-to-end encryption in messaging systems.  We are
 investigating bringing MLS to Matrix.
 
-# Resources
+In most cases, MLS has better performance in large groups than Olm/Megolm.  The
+graph below shows a comparison[¹] between some MLS and Olm/Megolm operations.
 
-- [MSC2883](https://github.com/matrix-org/matrix-spec-proposals/pull/2883):
-  Matrix-flavoured MLS
-- [Decentralised
-  MLS](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org)
+![Comparison graph](comparison.png)
+
+The graph gives a simplified comparison, but gives an idea of their relative
+performance.  In most cases, MLS is faster than Olm/Megolm.  But one case in
+which MLS can be much slower when adding a large number of users to a group at
+a time.  It is expected that this would not be a common occurrence.
+
+However, integrating MLS into Matrix is not a simple task.  One of the biggest
+hurdles is that MLS assumes that epochs (essentially, the state of an MLS tree
+in between updates to the tree) have a linear ordering.  However, Matrix being
+a decentralised system with no central authority, it is difficult to enforce a
+linear ordering.  Thus we must either determine a way to do so, or work around
+this limitation.
+
+In addition, we need to investigate how other Matrix features, such as key
+backups, interact with MLS.
+
+¹ code for running the comparison is at https://gitlab.matrix.org/uhoreg/mls-comparison
 
 # Tasks
 
-TODO: ...
+## Initial investigation
+- ✅ create trial implementation of MLS
+- ✅ investigate non-decentralised MLS on Matrix
+- ✅ investigate and test strategies for decentralised MLS
+- ✅ investigate backfilling commit messages
+- ✅ performance comparison between (non-decentralised) MLS and Olm/Megolm
+
+## Implementation
+- ☐ investigate suitability of OpenMLS as a base for decentralised MLS
+- ☐ create a library for decentralised MLS
+- ☐ trial implementation in a client
+- ☐ investigate decryption of historical messages
+  - re-decryption of old messages
+  - key sharing
+  - key backup
+- ☐ investigate external commits (ability to send an encrypted message before a
+  current member has added you to the MLS tree)
+- ☐ write and finalise MSCs for MLS over Matrix
+- ☐ integrate decentralised MLS into Rust crypto crate
+- ☐ fully support MLS in clients
+
+# Resources
+
+- [MSC2883](https://github.com/matrix-org/matrix-spec-proposals/pull/2883):
+  Matrix-flavoured MLS - (preliminary) description of how to do MLS over Matrix
+- [Decentralised
+  MLS](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org) -
+  an investigation into avoiding the requirement for a linear ordering of MLS epochs
