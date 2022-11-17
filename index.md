@@ -38,7 +38,10 @@ this limitation.
 In addition, we need to investigate how other Matrix features, such as key
 backups, interact with MLS.
 
-<a name="fn1">¹</a> code for running the comparison is at https://gitlab.matrix.org/uhoreg/mls-comparison
+<a name="fn1">¹</a> code for running the comparison is at
+<https://gitlab.matrix.org/uhoreg/mls-comparison>. More details on how the
+comparison was run is at
+<https://gitlab.matrix.org/uhoreg/mls-comparison/-/wikis/home>.
 
 # Tasks
 
