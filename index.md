@@ -38,11 +38,6 @@ this limitation.
 In addition, we need to investigate how other Matrix features, such as key
 backups, interact with MLS.
 
-<a name="fn1">¹</a> code for running the comparison is at
-<https://gitlab.matrix.org/uhoreg/mls-comparison>. More details on how the
-comparison was run is at
-<https://gitlab.matrix.org/uhoreg/mls-comparison/-/wikis/home>.
-
 # Tasks
 
 ## Initial investigation
@@ -73,3 +68,10 @@ comparison was run is at
 - [Decentralised
   MLS](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org) -
   an investigation into avoiding the requirement for a linear ordering of MLS epochs
+
+-----
+
+<a name="fn1">¹</a> code for running the comparison is at
+<https://gitlab.matrix.org/uhoreg/mls-comparison>. More details on how the
+comparison was run is at
+<https://gitlab.matrix.org/uhoreg/mls-comparison/-/wikis/home>.
