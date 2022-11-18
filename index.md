@@ -40,26 +40,39 @@ backups, interact with MLS.
 
 # Tasks
 
+(tasks are not necessarily in order)
+
 ## Initial investigation
 - ✅ create trial implementation of MLS
+  - [source code](https://gitlab.matrix.org/matrix-org/mls-ts/)
 - ✅ investigate non-decentralised MLS on Matrix
 - ✅ investigate and test strategies for decentralised MLS
+  - [ideas](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org)
+  - [source
+    code](https://gitlab.matrix.org/matrix-org/mls-ts/-/tree/decentralised2)
 - ✅ investigate backfilling commit messages
 - ✅ performance comparison between (non-decentralised) MLS and Olm/Megolm
+  - [source code](https://gitlab.matrix.org/uhoreg/mls-comparison)
+  - [initial comparison](https://gitlab.matrix.org/uhoreg/mls-comparison/-/wikis/home)
 
 ## Implementation
-- ☐ investigate suitability of OpenMLS as a base for decentralised MLS
+- ☐ investigate suitability of [OpenMLS](https://github.com/openmls/openmls)
+  (Rust implementation of MLS) as a base for decentralised MLS
 - ☐ create a library for decentralised MLS
 - ☐ trial implementation in a client
 - ☐ investigate decryption of historical messages
   - re-decryption of old messages
   - key sharing
   - key backup
-- ☐ investigate external commits (ability to send an encrypted message before a
-  current member has added you to the MLS tree)
-- ☐ write and finalise MSCs for MLS over Matrix
+- ☐ investigate and implement external commits (ability to send an encrypted
+  message before a current member has added you to the MLS tree)
 - ☐ integrate decentralised MLS into Rust crypto crate
+- ☐ write bindings for other languages
 - ☐ fully support MLS in clients
+
+## Documentation
+- ☐ write and finalise MSCs for MLS over Matrix
+- ☐ write MLS implementation guide for clients
 
 # Resources
 
