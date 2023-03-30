@@ -56,10 +56,10 @@ backups, interact with MLS.
   - [initial comparison](https://gitlab.matrix.org/uhoreg/mls-comparison/-/wikis/home)
 
 ## Implementation
-- ☐ investigate suitability of [OpenMLS](https://github.com/openmls/openmls)
+- ✅ investigate suitability of [OpenMLS](https://github.com/openmls/openmls)
   (Rust implementation of MLS) as a base for decentralised MLS
-- ☐ create a library for decentralised MLS
-- ☐ trial implementation in a client
+- ✅ create a library for decentralised MLS: [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls)
+- ⏳ trial implementation in a client
 - ☐ investigate decryption of historical messages
   - re-decryption of old messages
   - key sharing
