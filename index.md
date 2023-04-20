@@ -60,12 +60,13 @@ backups, interact with MLS.
   (Rust implementation of MLS) as a base for decentralised MLS
 - ✅ create a library for decentralised MLS: [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls)
 - ⏳ trial implementation in a client
+  - 🎞️ [demo of group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+- ☐ investigate and implement external commits (ability to send an encrypted
+  message before a current member has added you to the MLS tree)
 - ☐ investigate decryption of historical messages
   - re-decryption of old messages
   - key sharing
   - key backup
-- ☐ investigate and implement external commits (ability to send an encrypted
-  message before a current member has added you to the MLS tree)
 - ☐ integrate decentralised MLS into Rust crypto crate
 - ☐ write bindings for other languages
 - ☐ fully support MLS in clients
