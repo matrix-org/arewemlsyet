@@ -59,8 +59,11 @@ backups, interact with MLS.
 - ✅ investigate suitability of [OpenMLS](https://github.com/openmls/openmls)
   (Rust implementation of MLS) as a base for decentralised MLS
 - ✅ create a library for decentralised MLS: [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls)
-- ⏳ trial implementation in a client
+- ⏳ proof of concept implementation in a client (Element Web)
   - 🎞️ [demo of group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+  - 🧑‍💻[matrix-js-sdk
+    PR](https://github.com/matrix-org/matrix-js-sdk/pull/3306),
+    [matrix-react-sdk PR](https://github.com/matrix-org/matrix-react-sdk/pull/10669)
 - ☐ investigate and implement external commits (ability to send an encrypted
   message before a current member has added you to the MLS tree)
 - ☐ investigate decryption of historical messages
