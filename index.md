@@ -1,7 +1,7 @@
 ---
 image: "https://arewemlsyet.com/assets/images/logo.png?1"
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2022-11-16_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-05-01_
 
 ```
                                    __   __ _    ____               _   ___ 
