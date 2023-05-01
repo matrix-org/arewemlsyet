@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v3
       - run: echo '# History' >> index.md
       - name: Append Git History
-        run: git log -n 15 --abbrev-commit --date=short --decorate --format=format:'%h - (%ad) %s%n' --all | sed 's/^......./[&](https:\/\/github.com\/matrix-org\/arewep2pyet\/commit\/&)/' >> index.md
+        run: git log -n 15 --abbrev-commit --date=short --decorate --format=format:'%h - (%ad) %s%n' --all | sed 's/^......./[&](https:\/\/github.com\/matrix-org\/arewemlsyet\/commit\/&)/' >> index.md
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
