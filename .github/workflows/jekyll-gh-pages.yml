@@ -28,6 +28,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - run: echo '' >> index.md
       - run: echo '# History' >> index.md
       - name: Append Git History
         run: git log -n 15 --abbrev-commit --date=short --decorate --format=format:'%h - (%ad) %s%n' --all | sed 's/^......./[&](https:\/\/github.com\/matrix-org\/arewemlsyet\/commit\/&)/' >> index.md
