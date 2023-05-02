@@ -105,6 +105,8 @@ backups, interact with MLS.
   - [demo of group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
   - [demo of group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
 - 🧑‍💻 Implementations
+  - [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls) - Rust library
+    for decentralised MLS in Matrix
   - [Proof of concept implementation in
     Element](https://element-mls-proof-of-concept.netlify.app) ⚠️ This
     implementation does not persist state, so if you reload the page, you will
