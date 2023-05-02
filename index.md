@@ -1,7 +1,7 @@
 ---
 image: "https://arewemlsyet.com/assets/images/logo.png?1"
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-05-01_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-05-02_
 
 ```
                                    __   __ _    ____               _   ___ 
@@ -15,8 +15,13 @@ image: "https://arewemlsyet.com/assets/images/logo.png?1"
 # Not Yet.
 
 [Messaging Layer Security (MLS)](https://messaginglayersecurity.rocks/) is an
-upcoming IETF standard for end-to-end encryption in messaging systems.  We are
-investigating bringing MLS to Matrix.
+(almost) IETF standard for end-to-end encryption in messaging systems.  We are
+investigating bringing MLS to Matrix.  So far we have basic encryption and
+decryption working and can handle membership changes.
+
+Latest demo video:
+
+<iframe title="MLS Element demo - group updates 2023-04-21" src="https://scitech.video/videos/embed/b4e06441-2294-4878-babe-1a6c685637cf" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
 
 In most cases, MLS has better performance in large groups than Olm/Megolm.  The
 graph below shows a comparison[¹](#fn1) between some MLS and Olm/Megolm operations.
@@ -59,12 +64,17 @@ backups, interact with MLS.
 - ✅ investigate suitability of [OpenMLS](https://github.com/openmls/openmls)
   (Rust implementation of MLS) as a base for decentralised MLS
 - ✅ create a library for decentralised MLS: [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls)
-- ⏳ proof of concept implementation in a client (Element Web)
-  - 🎞️ [demo of group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+- ⏳ proof of concept implementation in a client (Element Web) ⚠️ This
+  implementation does not persist state, so if you reload the page, you will
+  lose data.  Only use with test accounts.
+  - 🎞️ [demo 1: group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+  - 🎞️ [demo 2: group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
   - 🧑‍💻[matrix-js-sdk
     PR](https://github.com/matrix-org/matrix-js-sdk/pull/3306),
-    [matrix-react-sdk PR](https://github.com/matrix-org/matrix-react-sdk/pull/10669)
-- ☐ investigate and implement external commits (ability to send an encrypted
+    [matrix-react-sdk
+    PR](https://github.com/matrix-org/matrix-react-sdk/pull/10669)
+  - 🖱️ [try it out](https://element-mls-proof-of-concept.netlify.app)
+- ⏳ investigate and implement external commits (ability to send an encrypted
   message before a current member has added you to the MLS tree)
 - ☐ investigate decryption of historical messages
   - re-decryption of old messages
@@ -85,6 +95,17 @@ backups, interact with MLS.
 - [Decentralised
   MLS](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org) -
   an investigation into avoiding the requirement for a linear ordering of MLS epochs
+- 🎞️ Demo videos
+  - [demo of group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+  - [demo of group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
+- 🧑‍💻 Implementations
+  - [Proof of concept implementation in
+    Element](https://element-mls-proof-of-concept.netlify.app) ⚠️ This
+    implementation does not persist state, so if you reload the page, you will
+    lose data.  Only use with test accounts.
+    - [matrix-js-sdk PR](https://github.com/matrix-org/matrix-js-sdk/pull/3306)
+    - [matrix-react-sdk
+      PR](https://github.com/matrix-org/matrix-react-sdk/pull/10669)
 
 -----
 
