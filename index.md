@@ -19,9 +19,15 @@ image: "https://arewemlsyet.com/assets/images/logo.png?1"
 investigating bringing MLS to Matrix.  So far we have basic encryption and
 decryption working and can handle membership changes.
 
-Latest demo video:
+Latest demo video: group updates
 
 <iframe title="MLS Element demo - group updates 2023-04-21" src="https://scitech.video/videos/embed/b4e06441-2294-4878-babe-1a6c685637cf" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
+
+Previous demo videos:
+
+- [group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+
+## Why MLS?
 
 In most cases, MLS has better performance in large groups than Olm/Megolm.  The
 graph below shows a comparison[¹](#fn1) between some MLS and Olm/Megolm operations.
