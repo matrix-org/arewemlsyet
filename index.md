@@ -1,7 +1,7 @@
 ---
 image: "https://arewemlsyet.com/assets/images/logo.png?1"
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-05-02_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-06-15_
 
 ```
                                    __   __ _    ____               _   ___ 
@@ -19,12 +19,13 @@ image: "https://arewemlsyet.com/assets/images/logo.png?1"
 investigating bringing MLS to Matrix.  So far we have basic encryption and
 decryption working and can handle membership changes.
 
-Latest demo video: group updates
+Latest demo video: external commits
 
-<iframe title="MLS Element demo - group updates 2023-04-21" src="https://scitech.video/videos/embed/b4e06441-2294-4878-babe-1a6c685637cf" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
+<iframe title="MLS Element demo - external commits" src="https://scitech.video/videos/embed/2be724b5-da6e-46ba-8776-52747dded7ae" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
 
 Previous demo videos:
 
+- [group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
 - [group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
 
 ## Why MLS?
@@ -75,14 +76,15 @@ backups, interact with MLS.
   lose data.  Only use with test accounts.
   - 🎞️ [demo 1: group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
   - 🎞️ [demo 2: group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
+  - 🎞️ [demo 3: external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
   - 🧑‍💻[matrix-js-sdk
     PR](https://github.com/matrix-org/matrix-js-sdk/pull/3306),
     [matrix-react-sdk
     PR](https://github.com/matrix-org/matrix-react-sdk/pull/10669)
   - 🖱️ [try it out](https://element-mls-proof-of-concept.netlify.app)
-- ⏳ investigate and implement external commits (ability to send an encrypted
+- ✅ investigate and implement external commits (ability to send an encrypted
   message before a current member has added you to the MLS tree)
-- ☐ investigate decryption of historical messages
+- ⏳ investigate decryption of historical messages
   - re-decryption of old messages
   - key sharing
   - key backup
@@ -102,8 +104,9 @@ backups, interact with MLS.
   MLS](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org) -
   an investigation into avoiding the requirement for a linear ordering of MLS epochs
 - 🎞️ Demo videos
-  - [demo of group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
-  - [demo of group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
+  - [group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+  - [group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
+  - [external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
 - 🧑‍💻 Implementations
   - [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls) - Rust library
     for decentralised MLS in Matrix
