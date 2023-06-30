@@ -1,7 +1,7 @@
 ---
 image: "https://arewemlsyet.com/assets/images/logo.png?1"
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-06-15_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-06-30_
 
 ```
                                    __   __ _    ____               _   ___ 
@@ -21,10 +21,11 @@ decryption working and can handle membership changes.
 
 Latest demo video: external commits
 
-<iframe title="MLS Element demo - external commits" src="https://scitech.video/videos/embed/2be724b5-da6e-46ba-8776-52747dded7ae" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
+<iframe title="MLS Element demo - key backup" src="https://scitech.video/videos/embed/dfc73f6f-241c-4a17-a10a-7b1de07afc2a" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
 
 Previous demo videos:
 
+- [external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
 - [group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
 - [group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
 
@@ -77,6 +78,7 @@ backups, interact with MLS.
   - 🎞️ [demo 1: group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
   - 🎞️ [demo 2: group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
   - 🎞️ [demo 3: external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
+  - 🎞️ [demo 4: key backup](https://scitech.video/w/tCHKoZbEbhkTFBPBYtKuv1)
   - 🧑‍💻[matrix-js-sdk
     PR](https://github.com/matrix-org/matrix-js-sdk/pull/3306),
     [matrix-react-sdk
@@ -84,16 +86,15 @@ backups, interact with MLS.
   - 🖱️ [try it out](https://element-mls-proof-of-concept.netlify.app)
 - ✅ investigate and implement external commits (ability to send an encrypted
   message before a current member has added you to the MLS tree)
-- ⏳ investigate decryption of historical messages
+- ✅ investigate decryption of historical messages
   - re-decryption of old messages
-  - key sharing
   - key backup
 - ☐ integrate decentralised MLS into Rust crypto crate
 - ☐ write bindings for other languages
 - ☐ fully support MLS in clients
 
 ## Documentation
-- ☐ write and finalise MSCs for MLS over Matrix
+- ⏳ write and finalise MSCs for MLS over Matrix
 - ☐ write MLS implementation guide for clients
 
 # Resources
@@ -107,6 +108,7 @@ backups, interact with MLS.
   - [group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
   - [group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
   - [external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
+  - [key backup](https://scitech.video/w/tCHKoZbEbhkTFBPBYtKuv1)
 - 🧑‍💻 Implementations
   - [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls) - Rust library
     for decentralised MLS in Matrix
