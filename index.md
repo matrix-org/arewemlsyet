@@ -19,7 +19,7 @@ image: "https://arewemlsyet.com/assets/images/logo.png?1"
 investigating bringing MLS to Matrix.  So far we have basic encryption and
 decryption working and can handle membership changes.
 
-Latest demo video: external commits
+Latest demo video: key backup
 
 <iframe title="MLS Element demo - key backup" src="https://scitech.video/videos/embed/dfc73f6f-241c-4a17-a10a-7b1de07afc2a" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
 
