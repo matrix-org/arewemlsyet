@@ -1,7 +1,7 @@
 ---
 image: "https://arewemlsyet.com/assets/images/logo.png?1"
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org){: .logo} _Last updated: 2023-06-30_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org) ![MLS](/assets/mls-logo.png) _Last updated: 2023-07-18_
 
 ```
                                    __   __ _    ____               _   ___ 
@@ -15,7 +15,7 @@ image: "https://arewemlsyet.com/assets/images/logo.png?1"
 # Not Yet.
 
 [Messaging Layer Security (MLS)](https://messaginglayersecurity.rocks/) is an
-(almost) IETF standard for end-to-end encryption in messaging systems.  We are
+[IETF standard](https://datatracker.ietf.org/doc/rfc9420/) for end-to-end encryption in messaging systems.  We are
 investigating bringing MLS to Matrix.  So far we have basic encryption and
 decryption working and can handle membership changes.
 
