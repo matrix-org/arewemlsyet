@@ -21,7 +21,7 @@ decryption working and can handle membership changes.
 
 Latest demo video: key backup
 
-<iframe title="MLS Element demo - key backup" src="https://scitech.video/videos/embed/dfc73f6f-241c-4a17-a10a-7b1de07afc2a" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
+<iframe src="https://drive.google.com/file/d/1gL7LM6Aq9WfRhMs4DyboGwImW_5KJ_l2/preview" width="640" height="480" allow="autoplay"></iframe>
 
 Previous demo videos:
 
@@ -75,10 +75,10 @@ backups, interact with MLS.
 - ⏳ proof of concept implementation in a client (Element Web) ⚠️ This
   implementation does not persist state, so if you reload the page, you will
   lose data.  Only use with test accounts.
-  - 🎞️ [demo 1: group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
-  - 🎞️ [demo 2: group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
-  - 🎞️ [demo 3: external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
-  - 🎞️ [demo 4: key backup](https://scitech.video/w/tCHKoZbEbhkTFBPBYtKuv1)
+  - 🎞️ [demo 1: group creation](https://drive.google.com/file/d/1RMgE0Jp_-leqHzIpsjrWshlxMchK7d3K/view)
+  - 🎞️ [demo 2: group updates](https://drive.google.com/file/d/1Mbxo1PrhNUG8NrZ_wMYIZq1wVXMvbxjI/view)
+  - 🎞️ [demo 3: external commits](https://drive.google.com/file/d/1lMSY6UERUvs9swcvvNsds6oTAgQcOev4/view)
+  - 🎞️ [demo 4: key backup](https://drive.google.com/file/d/1gL7LM6Aq9WfRhMs4DyboGwImW_5KJ_l2/view)
   - 🧑‍💻[matrix-js-sdk
     PR](https://github.com/matrix-org/matrix-js-sdk/pull/3306),
     [matrix-react-sdk
