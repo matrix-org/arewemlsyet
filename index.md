@@ -1,7 +1,7 @@
 ---
 image: "https://arewemlsyet.com/assets/images/logo.png?1"
 ---
-[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org) ![MLS](/assets/mls-logo.png) _Last updated: 2023-07-18_
+[![Matrix](/assets/images/matrix-logo-white.svg)](https://matrix.org) ![MLS](/assets/mls-logo.png) _Last updated: 2025-06-20_
 
 ```
                                    __   __ _    ____               _   ___ 
@@ -25,9 +25,9 @@ Latest demo video: key backup
 
 Previous demo videos:
 
-- [external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
-- [group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
-- [group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
+- [external commits](https://drive.google.com/file/d/1lMSY6UERUvs9swcvvNsds6oTAgQcOev4/view)
+- [group updates](https://drive.google.com/file/d/1Mbxo1PrhNUG8NrZ_wMYIZq1wVXMvbxjI/view)
+- [group creation](https://drive.google.com/file/d/1RMgE0Jp_-leqHzIpsjrWshlxMchK7d3K/view)
 
 ## Why MLS?
 
@@ -105,10 +105,10 @@ backups, interact with MLS.
   MLS](https://gitlab.matrix.org/matrix-org/mls-ts/-/blob/decentralised2/decentralised.org) -
   an investigation into avoiding the requirement for a linear ordering of MLS epochs
 - 🎞️ Demo videos
-  - [group creation](https://scitech.video/w/sfMitVx1Zej4Yvvu3fAK5B)
-  - [group updates](https://scitech.video/w/oksixuh4b1LT3cVQoMy1Ac)
-  - [external commits](https://scitech.video/w/6qrj9xGRHfSS3ePYmVpjCo)
-  - [key backup](https://scitech.video/w/tCHKoZbEbhkTFBPBYtKuv1)
+  - [group creation](https://drive.google.com/file/d/1RMgE0Jp_-leqHzIpsjrWshlxMchK7d3K/view)
+  - [group updates](https://drive.google.com/file/d/1Mbxo1PrhNUG8NrZ_wMYIZq1wVXMvbxjI/view)
+  - [external commits](https://drive.google.com/file/d/1lMSY6UERUvs9swcvvNsds6oTAgQcOev4/view)
+  - [key backup](https://drive.google.com/file/d/1gL7LM6Aq9WfRhMs4DyboGwImW_5KJ_l2/view)
 - 🧑‍💻 Implementations
   - [matrix-dmls](https://gitlab.matrix.org/uhoreg/matrix-dmls) - Rust library
     for decentralised MLS in Matrix
